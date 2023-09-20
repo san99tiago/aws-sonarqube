@@ -84,3 +84,7 @@ To remove the SonarQube Server, please execute:
 ```bash
 docker-compose down
 ```
+
+## Next Steps
+
+After these initial validations are in place, we can proceed to explore more advanced SonarQube settings, as well as thinking of a cloud-based SonarQube Server, with some production-grade company wide organization setup. <br>

@@ -6,7 +6,7 @@ This project covers the deployment of SonarQube on EC2 instances managed with Ia
 
 ## Local SonarQube Usage 🔮
 
-To do local tests and validations without deploying to AWS, please follow the instructions in these 2 README files under the `./docker` folder:
+To do local tests and validations without deploying to AWS, please follow the instructions in these 2 README files under the `./docker` folder (detailed explanations with step-by-step guide):
 
 - [README SonarQube Server Local](./docker/server-setup/README.md)
 - [README SonarQube Scanner CLI Local](./docker/scanner-setup/README.md)
