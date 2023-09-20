@@ -1,0 +1,29 @@
+# NOTE: docker-compose is for local SonarQube tests (not production-grade deployment)
+
+version: "3.8"
+
+services:
+  mysonarqube:
+    container_name: my_custom_sonarqube
+    image: sonarqube:9-community
+    environment:
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+    ports:
+      - "9000:9000"
+    networks:
+      - devops_santi
+    volumes:
+      - ./sonarqube_home/data/:/opt/sonarqube/data
+      - ./sonarqube_home/logs/:/opt/sonarqube/logs
+      - ./sonarqube_home/extensions/:/opt/sonarqube/extensions
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 3G
+
+networks:
+  devops_santi:
+    driver: bridge
+    name: devops_santi
