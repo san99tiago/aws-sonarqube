@@ -1,3 +1,5 @@
+# NOTE: The CDK dependencies are managed with NPM, these are for the inner docker folder Python deps
+
 [tool.poetry]
 name = "aws-cdk-sonarqube-ec2"
 version = "0.0.1"
