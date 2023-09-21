@@ -7,7 +7,6 @@ temp.*
 temp/
 .DS_Store
 
-
 ################################################################################
 # SONARQUBE IGNORES
 ################################################################################
@@ -21,6 +20,9 @@ sonarqube_home/
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+
+# CDK context
+cdk.context.json
 
 *.swp
 package-lock.json
@@ -46,7 +48,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/
 lib64/
 parts/
 sdist/
