@@ -51,7 +51,7 @@ unzip sonarqube-10.2.1.78527.zip
 # Move SonarQube to expected /opt/sonarqube path
 sudo mv sonarqube-10.2.1.78527 /opt/sonarqube
 
-# TODO: Add SonarQube config in a secure fashion
+# TODO: Add SonarQube config for the DB endpoint in a secure fashion
 # echo -e "sonar.jdbc.username=sonar \n sonar.jdbc.password=sonar \n sonar.jdbc.url=jdbc:postgresql://localhost/sonar" >> /opt/sonarqube/conf/sonar.properties
 
 # Configure new user for SonarQube
@@ -60,6 +60,5 @@ sudo usermod -a -G sonar ec2-user
 chown -R ec2-user:sonar /opt/sonarqube
 chown ec2-user:sonar /opt/sonarqube/bin/linux-x86-64/sonar.sh
 
-# Start SonarQube server
-su ec2-user
-/opt/sonarqube/bin/linux-x86-64/sonar.sh start
+# Start SonarQube server as the "ec2-user" (Important: not possible to run as root due to ES limitations)
+su ec2-user -c '/opt/sonarqube/bin/linux-x86-64/sonar.sh start'
