@@ -1,4 +1,4 @@
-# AWS-CDK-SONARQUBE-EC2
+# CDK-SONARQUBE-EC2
 
 This project covers the deployment of SonarQube on EC2 instances managed with IaC on top of AWS-CDK. <br>
 
